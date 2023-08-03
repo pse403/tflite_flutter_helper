@@ -74,7 +74,7 @@ class BoundingBoxUtils {
     SupportPreconditions.checkArgument(
       shape[boundingBoxAxis] == 4,
       errorMessage:
-          "Size of bounding box dimBouBoxension $boundingBoxAxis is not 4. Got ${shape[boundingBoxAxis]} in shape $shape",
+          "Size of bounding box dimension $boundingBoxAxis is not 4. Got ${shape[boundingBoxAxis]} in shape $shape",
     );
     SupportPreconditions.checkArgument(
       valueIndex.length == 4,

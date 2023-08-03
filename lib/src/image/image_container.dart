@@ -24,10 +24,23 @@ class ImageContainer extends BaseImageContainer {
 
   @override
   ColorSpaceType get colorSpaceType {
-    int len = _image.data.length;
+    print('ARE WE IN HERE ?? !!!');
+    return ColorSpaceType.RGB;
+
+    /* int len = _image.data?.length ?? 0;
     bool isGrayscale = true;
-    for (int i = (len / 4).floor(); i < _image.data.length; i++) {
-      if (_image.data[i] != 0) {
+    late final int m;
+    if (_image.data == null) {
+      m = 0;
+    } else {
+      m = _image.data!.length;
+    }
+
+    for (int i = (len / 4).floor(); i < m; i++) {
+      // TODO:: how do we do this? run a loop to track by ourselves? or is there an easier way?
+      print('yeah we are here');
+      if (1 != 0) {
+        // if (_image.data?[i] != 0) {
         isGrayscale = false;
         break;
       }
@@ -36,7 +49,7 @@ class ImageContainer extends BaseImageContainer {
       return ColorSpaceType.GRAYSCALE;
     } else {
       return ColorSpaceType.RGB;
-    }
+    }*/
   }
 
   @override

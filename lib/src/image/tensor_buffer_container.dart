@@ -15,7 +15,7 @@ class TensorBufferContainer implements BaseImageContainer {
   /// Creates a {@link TensorBufferContainer} object with the specified {@link
   /// TensorImage#ColorSpaceType}.
   ///
-  /// <p>Only supports {@link ColorSapceType#RGB} and {@link ColorSpaceType#GRAYSCALE}. Use {@link
+  /// <p>Only supports {@link ColorSpaceType#RGB} and {@link ColorSpaceType#GRAYSCALE}. Use {@link
   /// #create(TensorBuffer, ImageProperties)} for other color space types.
   ///
   /// @throws IllegalArgumentException if the shape of the {@link TensorBuffer} does not match the
@@ -59,6 +59,7 @@ class TensorBufferContainer implements BaseImageContainer {
   @override
   Image get image {
     if (_buffer.getDataType() != TfLiteType.uint8) {
+      // print('yes this warning here');
       // Print warning instead of throwing an exception. When using float models, users may want to
       // convert the resulting float image into Bitmap. That's fine to do so, as long as they are
       // aware of the potential accuracy lost when casting to uint8.

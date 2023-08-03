@@ -66,6 +66,8 @@ class TensorImage {
   /// Load [Image] to this [TensorImage]
   void loadImage(Image image) {
     _container = ImageContainer.create(image);
+    // print('got the container');
+    // print(_container.getTensorBuffer(TfLiteType.float32);
   }
 
   /// Load a list of RGB pixels into this [TensorImage]
@@ -171,7 +173,7 @@ class TensorImage {
   /// It's essentially a short cut for [getTensorBuffer.getBuffer()].
   ///
   /// Throws [StateError] if the TensorImage never loads data.
-  ByteBuffer get buffer {    
+  ByteBuffer get buffer {
     return tensorBuffer.buffer;
   }
 

@@ -4,15 +4,15 @@ import 'package:tflite_flutter_helper/src/image/image_conversions.dart';
 import 'package:tflite_flutter_helper/src/tensorbuffer/tensorbuffer.dart';
 
 abstract class ColorSpaceType {
-  // The first element of the normalizaed shape.
+  // The first element of the normalized shape.
   static const int BATCH_DIM = 0;
   // The batch axis should always be one.
   static const int BATCH_VALUE = 1;
-  // The second element of the normalizaed shape.
+  // The second element of the normalized shape.
   static const int HEIGHT_DIM = 1;
-  // The third element of the normalizaed shape.
+  // The third element of the normalized shape.
   static const int WIDTH_DIM = 2;
-  // The fourth element of the normalizaed shape.
+  // The fourth element of the normalized shape.
   static const int CHANNEL_DIM = 3;
 
   static const ColorSpaceType RGB = const _RGB();
