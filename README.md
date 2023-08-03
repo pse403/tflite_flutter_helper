@@ -1,3 +1,9 @@
+# IMPORTANT NOTE
+
+This is just my mod of the original, now discontinued library so that I could continue using it with the Image library above version 4. I've only modded functions that pertain to my specific use case (running image recognitions from iOS camera frames) and I don't plan on doing any more here than needed as I go. At some point I'll abandon this, after finding time to incorporate the relevant frame conversions into my app in another way. If this is helpful to anyone in any way, please fork it rather than relying on this directly in any way.
+
+Everythign below this line constitutes the original README. 
+
 # TensorFlow Lite Flutter Helper Library
 
 TFLite Flutter Helper Library brings [TFLite Support Library](https://www.tensorflow.org/lite/inference_with_metadata/lite_support) and [TFLite Support Task Library](https://www.tensorflow.org/lite/inference_with_metadata/task_library/overview) to Flutter and helps users to develop ML and deploy TFLite models onto mobile devices quickly without compromising on performance.
