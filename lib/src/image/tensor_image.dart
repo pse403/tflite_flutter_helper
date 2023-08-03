@@ -66,8 +66,6 @@ class TensorImage {
   /// Load [Image] to this [TensorImage]
   void loadImage(Image image) {
     _container = ImageContainer.create(image);
-    // print('got the container');
-    // print(_container.getTensorBuffer(TfLiteType.float32);
   }
 
   /// Load a list of RGB pixels into this [TensorImage]
