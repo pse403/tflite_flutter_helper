@@ -23,7 +23,7 @@ class ImageConversions {
       int r = rgbValues[j++];
       int g = rgbValues[j++];
       int b = rgbValues[j++];
-      image.setPixelRgba(wi, hi, r, g, b, 1); // the famOUS ONE
+      image.setPixelRgba(wi, hi, r, g, b, 1);
       wi++;
       if (wi % w == 0) {
         wi = 0;
