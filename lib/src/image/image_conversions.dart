@@ -31,8 +31,6 @@ class ImageConversions {
       }
     }
 
-    print('this alpha thing');
-    print(image);
     return image;
   }
 
@@ -67,7 +65,7 @@ class ImageConversions {
 
     int flatSize = w * h * 3;
     List<int> shape = [h, w, 3];
-    print('into the switch!!');
+  
     switch (buffer.getDataType()) {
       case TfLiteType.uint8:
         List<int> byteArr = List.filled(flatSize, 0);
@@ -77,7 +75,7 @@ class ImageConversions {
           byteArr[j++] = ((intValues[i] >> 16) & 0xFF);
         }
         buffer.loadList(byteArr, shape: shape);
-        print('here tight');
+    
         break;
       case TfLiteType.float32:
         List<double> floatArr = List.filled(flatSize, 0.0);
